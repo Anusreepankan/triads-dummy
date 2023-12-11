@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriADS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+  <style>
+    .vertical-line {
+      width: 2px;
+      /* Adjust the width of the line as needed */
+      height: 50px;
+      /* Adjust the height of the line as needed */
+      background-color: #000;
+    }
+  </style>
+
+  <style>
+    /* moving logo */
+    @keyframes carouselAnim {
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(calc(-100% + (6 * 300px)));
+      }
+    }
+
+    @media  (min-width: 790px) and (max-width:1080px) {
+      .container .carousel-items {
+        animation: carouselAnim 10s infinite alternate linear;
+      }
+
+      @keyframes carouselAnim {
+        from {
+          transform: translate(calc(-100% + (6 * 300px)));
+        }
+
+        to {
+          transform: translate(translate(0, 0));
+        }
+      }
+    }
+
+
+       @media only screen and (max-width: 768px) {
+      .container .carousel-items {
+        animation: carouselAnim 10s infinite alternate linear;
+      }
+
+      @keyframes carouselAnim {
+        from {
+          transform: translate(calc(-100% + (6 * 300px)));
+        }
+
+        to {
+          transform: translate(translate(0, 0));
+        }
+      }
+    }
+
+    .carousel-focus:hover {
+      transition: all 0.5s;
+      transform: scale(0.8);
+    }
+  </style>
+
+  <style>
+    /* moving logo */
+    @keyframes carouselAnimSecond {
+      from {
+        transform: translate(calc(-100% + (6 * 300px)));
+      }
+
+      to {
+        transform: translate(0, 0);
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .container .carousel-itemsSecond {
+        animation: carouselAnim 10s infinite alternate linear;
+      }
+
+      @keyframes carouselAnim {
+        from {
+          transform: translate(calc(-100% + (6 * 300px)));
+        }
+
+        to {
+          transform: translate(translate(0, 0));
+        }
+      }
+    }
+
+    .carousel-focus:hover {
+      transition: all 0.5s;
+      transform: scale(0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <!--Navbar -->
+  <div class="shadow fixed z-10 w-full top-0 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4">
+        <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between" aria-label="Global">
+          <a class="flex-none text-xl font-semibold" href="#">
+            <img src="images/TriADS Logo.png" class="w-29 h-14" alt="">
+          </a>
+
+          
+          <div class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:pl-5">
+            <div class="text-base text-gray-700 space-x-10 hidden w-full md:flex md:items-center md:w-auto">
+              <a class="font-bold mb-2" href="#whoweare" aria-current="page">WHO WE ARE?</a>
+              <a class="font-bold mb-2" href="#service">OUR WORKS & SERVICES</a>
+              <a class="font-bold mb-2" href="#contact">CONTACT US</a>
+
+              
+            </div>
+
+            
+
+            <div class="h-[65px] border-l-4 border-gray-400"></div>
+            <div class="space-x-1  ">
+              <!-- Social Media Links -->
+              <!-- ... (your social media links) ... -->
+               <a href="https://www.facebook.com/trigeminal.ai.official"
+                class=" inline-block text-white p-1 text-xs font-medium uppercase leading-normal rounded-full bg-black">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+
+
+              <!-- insta -->
+              <a href="https://www.instagram.com/trigeminal_ai/"
+                class=" inline-block p-1 rounded-full text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+
+              <!-- linkedin -->
+
+              <a href="https://www.linkedin.com/company/trigeminal/"
+                class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg class="h-5 w-5" fill="currentColor" data-icon="linkedin-in" role="img"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                  class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x">
+                  <path fill="currentColor"
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                  </path>
+                </svg>
+              </a>
+
+
+              <a href="https://wa.me/918310217802" target="_blank"
+                class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" class="bi bi-whatsapp"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg>
+              </a>
+
+              
+
+            </div>
+             <!-- Hamburger Menu Icon -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 mt-2 mx-5 cursor-pointer md:hidden block"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            -->
+          </div>
+          
+        </nav>
+      </header>
+      
+
+      <!-- Mobile Menu (Initially Hidden) -->
+      <div id="mobileMenu" class="hidden sm:hidden bg-white border-t-2 py-2">
+        <!-- Close Button -->
+        <button id="closeMenu" class="text-gray-800  text-sm font-semibold float-right hover:text-purple-600 mb-1">
+         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </button>
+
+        <!-- Display navigation links as a list -->
+        <ul class="text-gray-800 text-sm font-semibold">
+          <li><a href="#whoweare" class="block py-2 hover:text-purple-600">WHO WE ARE?</a></li>
+          <li><a href="#service" class="block py-2 hover:text-purple-600">OUR WORKS & SERVICES</a></li>
+          <li><a href="#contact" class="block py-2 hover:text-purple-600">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero section-->
+<div class="mt-20">
+  <img src="images/TriADS Website/Cover.png" class="absolute object-cover w-full h-full" alt="" />
+  <div class="relative">
+    <div class="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="flex flex-col items-center justify-between xl:flex-row ">
+        <div class="w-full max-w-5xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+          <div class="mx-20 left-10 top-20 text-center px-5 mt-4 max-w-3xl absolute  " >
+            <p class="text-5xl text-left text-white ">
+              <span id="typed-output" class="text-5xl mt-2 font-medium text-white text-left leading-snug"></span>
+            </p>
+            <h2 class="text-4xl text-white text-left leading-loose ">
+              Talk to our expert!
+            </h2>
+          </div>
+        </div>
+        
+        <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+          <div class="bg-white rounded-3xl shadow-2xl p-7 sm:p-10 ">
+            <h3 class="mb-4 text-[#0055ba] font-bold text-2xl sm:text-center sm:mb-6 sm:text-2xl">
+              Get a Free Quote!
+            </h3>
+            <form>
+              <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 mt-5">
+              <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Name" />
+            </div>
+
+            <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+              <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Email Address" />
+            </div>
+
+            <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+              <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Phone Number" />
+            </div>
+
+            <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+              <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Subject" />
+            </div>
+
+            <div class="py-5">
+              <textarea class="w-full flex items-center border-2 py-2 px-4 rounded-2xl" name="" id="" cols="50"
+                placeholder="Tell us a bit about your requirement" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="block w-full bg-black mt-4 py-2 rounded-2xl text-white font-semibold mb-2">
+              Submit
+            </button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+<div id="whoweare"></div>
+
+  <!-- who we are section -->
+  <div  class="mt-10 bg-white px-6 xl:lg:py-14 sm:py-32 lg:px-0">
+    <h1 class="mt-5 sm:mt-10 text-6xl font-bold text-gray-900 sm:text-5xl text-center">
+      Who are we?
+    </h1>
+    <div class="max-w-full flex justify-center items-center">
+      <p class="text-2xl mt-10 max-w-5xl leading-normal text-[#0055ba] text-center">
+        A dedicated group of exceptionally talented experts who are deeply
+        committed to crafting influential marketing initiatives. Our agency
+        embraces a comprehensive perspective when it comes to advertising. Our
+        designers, copywriters, and digital marketers work together
+        seamlessly, guaranteeing the consistent delivery of your message
+        across every platform.
+      </p>
+    </div>
+
+    
+<div id="service"></div>
+  </div>
+
+  <!-- our services -->
+
+  <div  class="bg-white px-6 py-7 xl:lg:py-14 sm:py-32 lg:px-0">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h1 class=" text-6xl font-bold text-gray-900 sm:text-5xl text-center">
+        Our Services
+      </h1>
+      <br>
+      <div
+        class="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-3 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <div>
+          <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+            src="images/Individual Logos/2D Animation.png" alt="Transistor" width="158" height="48">
+          <p class="text-center leading-normal mt-2">2D Animation</p>
+        </div>
+
+        <div>
+          <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+            src="images/Individual Logos/AD Campaign.png" alt="Reform" width="158" height="48">
+          <p class="text-center leading-normal mt-2">2D Campaign</p>
+
+        </div>
+        <div>
+          <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+            src="images/Individual Logos/AD Films.png" alt="Tuple" width="158" height="48">
+          <p class="text-center leading-normal mt-2">AD Films</p>
+
+        </div>
+        <div>
+          <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+            src="images/Individual Logos/Brand Communication Strategy.png" alt="Tuple" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Branding & Communication</p>
+
+        </div>
+        <!-- <div>
+          <img class="col-span-2 max-h-12 w-full mt-5 object-contain lg:col-span-1"
+            src="images/Individual Logos/Brand Communication Strategy.png" alt="SavvyCal" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Brand Communication Strategy</p>
+
+        </div> -->
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Branding.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Branding</p>
+
+        </div>
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain lg:col-span-1"
+            src="images/Individual Logos/Corporate Presentation.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Corporate Presentation</p>
+
+        </div>
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Digital Creatives.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Digital Creatives</p>
+
+        </div>
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/GIF Animations.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">GIF Animations</p>
+
+        </div>
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Graphic Design.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Graphic Design</p>
+
+        </div>
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Logo Design.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Logo Design</p>
+
+        </div>
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Marketing Collaterals.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Marketing Collaterals</p>
+
+        </div>
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Newspaper Advertisements.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Newspaper Advertisements</p>
+
+        </div>
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Outdoor Creatives.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Outdoor Creatives</p>
+
+        </div>
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Packaging.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Packaging</p>
+
+        </div>
+
+
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Radio Scripts.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Radio Scripts</p>
+
+        </div>
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Social Media Content.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Social Media Content</p>
+
+        </div>
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/UI UX Design.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">UI UX Design</p>
+
+        </div>
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Video Production.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Video Production</p>
+
+        </div>
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Website Design.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Website Design</p>
+
+        </div>
+
+        <div>
+          <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+            src="images/Individual Logos/Web Apps.png" alt="Statamic" width="158" height="48">
+          <p class="text-center leading-normal mt-2">Web Apps</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The process section -->
+  <div class="mt-10 bg-white py-10 sm:py-16 lg:px-0 text-white">
+  <div class="bg-gradient-to-r from-[#006dff] to-[#000192] py-16">
+  <div class="container mx-auto text-center">
+    <p class="text-5xl sm:text-5xl font-bold text-white">
+      THE PROCESS <span class="mx-10 mt-1 sm:mt-2 text-2xl sm:text-2xl font-normal text-white text-center">“Redefining your Business Digital Opportunities”</span>
+    </p>
+  </div>
+</div>
+
+
+    <video autoplay muted loop src="images/TriADS Website/TriADS Logo.mp4" type="video/mp4"
+      class="w-full object-cover object-right md:object-center"></video>
+  </div>
+
+
+  <!-- why we choose us? -->
+
+  <!-- <div class="px-10">
+    <div class="bg-blue-500 p-5 rounded-3xl">
+      <h1 class="text-xl flex justify-center font-semibold text-white">Why Choose Us?</h1>
+      <div class="flex flex-wrap sm:flex-cols-2 md:flex-cols-4 lg:flex-cols-5 mt-5 ">
+        <div
+          class="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/5 px-5 mb-10 border-r-4 border-white flex flex-col justify-center items-center">
+          <img src="images/Why Choose Us/Quick Turnaround-Time.png" alt="">
+          <p class="text-white text-center font-semibold mt-2">Quick Turnaround Time</p>
+        </div>
+        <div
+          class="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/5 px-5 mb-10 sm:border-r-4 sm:border-white flex flex-col justify-center items-center">
+          <img src="images/Why Choose Us/Trusted Creative -Partner.png" alt="">
+          <p class="text-white text-center font-semibold mt-2">Trusted Creative Partner</p>
+        </div>
+        <div
+          class="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/5 px-5 mb-10 border-r-4 border-white flex flex-col justify-center items-center">
+          <img src="images/Why Choose Us/Creative Advertising- Solutions.png" alt="">
+          <p class="text-white text-center font-semibold mt-2">Creative Advertising- Solutions</p>
+        </div>
+        <div
+          class="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/5 px-5 mb-10 sm:border-r-4 sm:border-white flex flex-col justify-center items-center">
+          <img src="images/Why Choose Us/1000+ Projects- Completed.png" alt="">
+          <p class="text-white text-center font-semibold mt-2">1000+ Projects- Completed</p>
+        </div>
+        <div class="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/5 px-5 mb-10  flex flex-col justify-center items-center">
+          <img src="images/Why Choose Us/Team with a-Variety of Skills.png" alt="">
+          <p class="text-white text-center font-semibold mt-2">Team with a Variety of Skills</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+  <!-- logo moving section -->
+  <div class="mt-10 bg-white px-6 py-14 sm:py-20 lg:px-0">
+    <h1 class="text-6xl font-bold text-gray-900 sm:text-5xl text-center">
+      Our Clients
+    </h1>
+
+    <!-- logo -->
+    <section class="py-8 lg:py-5 overflow-x-hidden">
+      <div class="mx-auto w-full overflow-hidden relative">
+        <div class="carousel-items flex items-center justify-center" style="
+            width: fit-content;
+            animation: carouselAnim 10s infinite alternate linear;
+          ">
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/DigiDxDoc.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Dine-O-Code.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Dr Doggo.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Dr Zoo.png" alt="Img" />
+          </div>
+
+           <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/iVET GeneX.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Hoof Boss.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Ignite - Thrissur.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/iVET Aqua.png" alt="Img" />
+          </div>
+
+         
+
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Jeevamrutham Inclusions.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/iVET.png" alt="Img" />
+          </div>
+
+
+        </div>
+
+        <div class="carousel-itemsSecond flex items-center justify-center" style="
+            width: fit-content;
+            animation: carouselAnimSecond 10s infinite alternate linear;
+          ">
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Jeevamrutham Lifestyle Spa.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Kingini Orchids.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Medhelix.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Pearle's Diagnostics.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Petrado.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/SayGen Genetics.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Ubio.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Vetragen Healthcare.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Von Aanja Pet Relocation.png" alt="Img" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-white mx-10 my-10 px-4 py-3"
+            style="width: 370px">
+            <img class="h-50 w-70" src="images/Triads Logo/Zootopia.vet.png" alt="Img" />
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+  </div>
+
+  <!-- testimonials -->
+  <!-- <div class="relative max-w-screen-xl  px-8 md:px-12 lg:px-5 xl:px-32  mx-auto text-gray-900 ">
+    <div class="absolute right-0 bottom-0 hero-pattern w-64 h-56"></div>
+    <div class="relative">
+      <div>
+        <h2 class="text-6xl font-bold text-gray-900 sm:text-5xl text-center">
+          Testimonials
+        </h2>
+        <div class="my-4 mx-auto w-12 h-2 border-4 border-indigo-500"></div>
+        <div class="text-center text-gray-700 font-light">
+          Here are what some of our amazing customers are saying ...
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:mx-12">
+        <div
+          class="relative mx-auto mt-8 rounded-lg shadow max-w-sm p-10 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between">
+          <div class="-ml-4">
+            <svg class="w-8 opacity-25 text-indigo-500" xmlns="http://www.w3.org/2000/svg"
+              shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
+              fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0
+                                                                                                             640 640"
+              fill="currentColor">
+              <path
+                d="M557.133 561.704H442.128c-44.256 0-80.458-36.19-80.458-80.446 0-165.58-42.32-347.485 160.656-399.418 91.95-23.516 115.915 77.753 18.119 84.745-59.647 4.276-71.293 42.804-73.147 101.068h92.269c44.256 0 80.458 36.201 80.458 80.458v130.702c0 45.591-37.3 82.89-82.891 82.89zm-358.032 0H84.096c-44.256 0-80.446-36.19-80.446-80.446 0-165.58-42.331-347.485 160.644-399.418 91.95-23.516 115.915 77.753 18.118 84.745-59.646 4.276-71.292 42.804-73.146 101.068h92.269c44.256 0 80.457 36.201 80.457 80.458v130.702c0 45.591-37.3 82.89-82.89 82.89z" />
+            </svg>
+          </div>
+          <div class="mt-2">
+            I felt disorganized. Pieces of paper everywhere. I was constantly
+            making new lists, losing old ones, crossing off items and adding
+            new ones. I was forever worried things were slipping and not
+            getting done. My brain was tired
+          </div>
+          <div>
+            <div class="mx-auto w-full border border-gray-300 my-8"></div>
+            <div class="flex items-center">
+              <div>
+                <img class="w-12 h-12 rounded-full border-2 border-indigo-400" src="" alt="no img" />
+              </div>
+              <div class="ml-4">
+                <div class="font-bold">Name</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-auto mt-8 rounded-lg shadow max-w-sm p-10 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between">
+          <div class="-ml-4">
+            <svg class="w-8 opacity-25 text-indigo-500" xmlns="http://www.w3.org/2000/svg"
+              shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
+              fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0
+                                                                                                             640 640"
+              fill="currentColor">
+              <path
+                d="M557.133 561.704H442.128c-44.256 0-80.458-36.19-80.458-80.446 0-165.58-42.32-347.485 160.656-399.418 91.95-23.516 115.915 77.753 18.119 84.745-59.647 4.276-71.293 42.804-73.147 101.068h92.269c44.256 0 80.458 36.201 80.458 80.458v130.702c0 45.591-37.3 82.89-82.891 82.89zm-358.032 0H84.096c-44.256 0-80.446-36.19-80.446-80.446 0-165.58-42.331-347.485 160.644-399.418 91.95-23.516 115.915 77.753 18.118 84.745-59.646 4.276-71.292 42.804-73.146 101.068h92.269c44.256 0 80.457 36.201 80.457 80.458v130.702c0 45.591-37.3 82.89-82.89 82.89z" />
+            </svg>
+          </div>
+          <div class="mt-2">
+            I felt disorganized. Pieces of paper everywhere. I was constantly
+            making new lists, losing old ones, crossing off items and adding
+            new ones. I was forever worried things were slipping and not
+            getting done. My brain was tired
+          </div>
+          <div>
+            <div class="mx-auto w-full border border-gray-300 my-8"></div>
+            <div class="flex items-center">
+              <div>
+                <img class="w-12 h-12 rounded-full border-2 border-indigo-400" src="" alt="no img" />
+              </div>
+              <div class="ml-4">
+                <div class="font-bold">Name</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- blog -->
+  <!-- <section class="mt-10  px-6 py-14 sm:py-20 lg:px-0">
+    <div class="container p-6 mx-auto space-y-8">
+      <div class="space-y-2 text-center">
+        <h2 class="text-6xl font-bold text-gray-900 sm:text-5xl text-center">Resource Articles</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col dark:bg-gray-900">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
+              src="https://source.unsplash.com/200x200/?fashion?1">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#"
+              class="text-xs tracki uppercase hover:underline dark:text-violet-400">Convenire</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold leadi">Te nulla oportere reprimique his dolorum</h3>
+            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+              <span>June 1, 2020</span>
+              <span>2.1K views</span>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col dark:bg-gray-900">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
+              src="https://source.unsplash.com/200x200/?fashion?2">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#"
+              class="text-xs tracki uppercase hover:underline dark:text-violet-400">Convenire</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold leadi">Te nulla oportere reprimique his dolorum</h3>
+            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+              <span>June 2, 2020</span>
+              <span>2.2K views</span>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col dark:bg-gray-900">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
+              src="https://source.unsplash.com/200x200/?fashion?3">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#"
+              class="text-xs tracki uppercase hover:underline dark:text-violet-400">Convenire</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold leadi">Te nulla oportere reprimique his dolorum</h3>
+            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+              <span>June 3, 2020</span>
+              <span>2.3K views</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section> -->
+
+
+
+  <!-- footer -->
+  <footer id="contact">
+
+  
+    <div class="max-w-2xl mt-10 mx-auto text-white py-10">
+      <div class="text-center ">
+        <div class="flex justify-center">
+          <img src="images/TriADS Logo.png" class="w-30 h-12 mx-auto" alt="">
+        </div>
+
+      </div>
+      <div class="mt-10 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400 justify-center">
+        <div class="flex justify-center items-center mx-auto gap-10">
+          <a  class="px-2 text-black font-semibold ">WHO ARE WE ?</a>
+          <span class="px-2  text-black font-semibold ">OUR WORKS & SERVICES</span>
+          <span class="px-2  text-black font-semibold ">CONTACT US</span>
+        </div>
+
+      </div>
+
+      <div class="flex justify-center items-center mx-auto gap-3 mt-3 ">
+
+        <a href="https://www.linkedin.com/company/trigeminal/" data-te-ripple-init data-te-ripple-color="light"
+          class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          style="background-color: black">
+          <svg class="h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+            class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x">
+            <path fill="currentColor"
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+            </path>
+          </svg>
+        </a>
+
+
+        <a href="https://www.facebook.com/trigeminal.ai.official" data-te-ripple-init data-te-ripple-color="light"
+          class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          style="background-color: black">
+          <svg class="h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-facebook-f fa-w-10 fa-7x">
+            <path fill="currentColor"
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+          </svg>
+        </a>
+
+
+        <!-- <a href=""
+              class="inline-block rounded-full bg-black text-white border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+              <svg class="h-3" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-twitter fa-w-16 fa-9x">
+                <path fill="currentColor"
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+              </svg>
+            </a> -->
+
+
+        <a href="https://www.instagram.com/trigeminal_ai/" data-te-ripple-init data-te-ripple-color="light"
+          class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          style="background-color: black">
+          <svg class="h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="gram" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-instagram fa-w-14 fa-9x">
+            <path fill="currentColor"
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/@TrigeminalAI" data-te-ripple-init data-te-ripple-color="light"
+          class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          style="background-color: black">
+          <svg class="h-4 w-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512">
+            <path fill="currentColor"
+              d="M549.655 123.083c-6.281-23.705-24.46-42.052-48.091-48.333C458.161 64 288 64 288 64S117.839 64 74.435 74.75c-23.631 6.281-41.81 24.628-48.091 48.333C16 166.161 16 256 16 256s0 89.839 10.744 131.917c6.281 23.705 24.459 41.952 48.091 48.233C117.839 448 288 448 288 448s170.161 0 213.565-10.75c23.631-6.281 41.81-24.528 48.091-48.233C560 345.839 560 256 560 256s0-89.839-10.745-131.917zm-338.64 176.36V212.518l133.971 66.962-133.97 66.962z" />
+          </svg>
+        </a>
+
+        <a href="https://goo.gl/maps/T3W9R3X6qQKJMr5Q6" data-te-ripple-init data-te-ripple-color="light"
+          class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          style="background-color:black ">
+          <svg class="h-4 w-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-white">
+            <path
+              d="M12 2C7.029 2 3 6.029 3 11c0 4.403 2.337 8.793 8.132 11.276a1.001 1.001 0 0 0 1.736 0C18.663 19.793 21 15.403 21 11c0-4.971-4.029-9-9-9zM12 18c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7z" />
+          </svg>
+        </a>
+
+      </div>
+
+
+
+
+
+    </div>
+    </div>
+  </footer>
+
+<script>
+    // JavaScript to toggle mobile menu
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuButton = document.getElementById("menu-button");
+      const closeMenuButton = document.getElementById("closeMenu");
+
+      menuButton.addEventListener("click", function () {
+        mobileMenu.classList.remove("hidden");
+        menuButton.classList.add("hidden");
+        closeMenuButton.classList.remove("hidden");
+      });
+
+      closeMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        menuButton.classList.remove("hidden");
+        closeMenuButton.classList.add("hidden");
+      });
+    });
+  </script>
+ 
+ <script>
+    var options = {
+      strings: [" Looking for Branding ?"," Social Media Management ?","Digital Marketing?"],
+      typeSpeed: 30, // typing speed in milliseconds
+      backSpeed: 30, // erasing speed in milliseconds
+      backDelay: 1000, // delay before starting to erase
+      startDelay: 500, // delay before starting to type
+      loop: true, // loop through the strings
+    };
+
+    var typed = new Typed("#typed-output", options);
+  </script>
+</body>
+
+</html>

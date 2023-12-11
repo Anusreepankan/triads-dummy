@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/TriADS-MAIN-logos/favicon.png">
+  <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="w-full fixed z-50 bg-gray-100 top-0">
+    <div class="w-full fixed z-50 bg-gray-100 top-0 -mt-1">
+    <nav
+      class="p-4 items-center justify-between mx-auto max-w-[75rem] bg-gray-100 lg:flex lg:items-center lg:justify-between">
+      <div class="flex justify-between items-center">
+        <a class="flex-none text-xl font-semibold xl:lg:px-5" href="#">
+          <img src="assets/images/TriADS-MAIN-logos/TriADS Logo.png" class="w-29 h-14" alt="TriADS Logo">
+        </a>
+        <span class="text-3xl cursor-pointer lg:hidden mx-2 block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        class="lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute bg-gray-100 w-full left-0 lg:w-auto lg:py-0 py-0 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 lg:my-0">
+          <a href="index.html" class="text-lg text-gray-900 font-semibold hover:text-[#0055ba] duration-500">WHO WE
+            ARE?</a>
+        </li>
+        <li class="mx-4 my-6 lg:my-0">
+          <a href="index.html" class="text-lg text-gray-900 font-semibold hover:text-[#0055ba] duration-500">OUR
+            SERVICES</a>
+        </li>
+        <li class="mx-4 my-6 lg:my-0">
+          <a href="index.html" class="text-lg text-gray-900 font-semibold hover:text-[#0055ba] duration-500">CONTACT
+            US</a>
+        </li>
+        <li>
+          <a class="md:p-1 py-2 block hover:text-purple-400" href="#">
+            <div class="h-[65px] border-l-4 border-gray-400 hidden md:hidden lg:block sm:block"></div>
+          </a>
+        </li>
+
+        <div class=" flex  px-5 space-x-2 pb-10 lg:pb-0 items-center ">
+          <li class="">
+            <a class=" block  text-purple-500" href="#"> <a href="https://www.facebook.com/trigeminal.ai.official"
+                class=" inline-block text-white p-1 text-xs font-medium  uppercase leading-normal rounded-full bg-black">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a></a>
+          </li>
+
+          <li>
+            <a class=" block " href="#"> <!-- insta -->
+              <a href="https://www.instagram.com/trigeminal_ai/"
+                class=" inline-block p-1 rounded-full text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a></a>
+          </li>
+
+
+          <li>
+            <a class=" block " href="#"> <!-- linkedin -->
+
+              <a href="https://www.linkedin.com/company/trigeminal/"
+                class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg class="h-5 w-5" fill="currentColor" data-icon="linkedin-in" role="img"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                  class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x">
+                  <path fill="currentColor"
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                  </path>
+                </svg>
+              </a>
+            </a>
+          </li>
+
+
+          <li>
+            <a class=" block" href="#"> <a href="https://wa.me/918310217802" target="_blank"
+                class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" class="bi bi-whatsapp"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg>
+              </a>
+            </a>
+          </li>
+        </div>
+
+
+      </ul>
+    </nav>
+  </div>
+  </div>
+
+  <section class="xl:lg:py-12 px-8 mt-32">
+    <div class="mx-auto max-w-screen-md">
+      <img src="assets/images/blog/social Media Advertising.jpg"
+        alt="Unlocking the Potential of Social Media Advertising" class="mb-4 aspect-[16/9] rounded-xl object-cover" />
+      <!-- <p
+      class="block font-sans text-sm font-light leading-normal text-inherit antialiased"
+    >
+      Photo by Marvin Meyer on{" "}
+      <a
+        href="https://unsplash.com/s/photos/team?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        target="_blank"
+        rel="noreferrer"
+        class="underline underline-offset-4 transition-colors hover:text-pink-500"
+      >
+        Unsplash
+      </a>
+    </p> -->
+      <h2
+        class="mb-6 mt-10 block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+        Introduction
+      </h2>
+      <p class="mb-10  block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+        In today's digital age, social media has become an integral part of our daily lives. With billions of active
+        users on platforms like Facebook, Instagram, Twitter, and LinkedIn, it's no surprise that businesses are
+        leveraging social media advertising to reach their target audience. <br />
+        <br />
+        Social media advertising is a powerful tool that can help businesses unlock their potential and achieve their
+        marketing goals. In this blog post, we'll explore the key strategies and best practices for harnessing the full
+        potential of social media advertising.
+      </p>
+      <h2
+        class="mb-6 block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+        Understanding the Landscape
+      </h2>
+      <p class="mb-10 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+        Before diving into the strategies, it's essential to have a clear understanding of the social media advertising
+        landscape. Each platform has its unique user base, demographics, and advertising options. Here are some popular
+        platforms and their characteristics:
+        <br />
+        <br />
+        1. <b>Facebook:</b> With over 2.8 billion monthly active users, Facebook offers a diverse user base. It's
+        suitable for businesses targeting a wide audience. Advertising options include feed ads, story ads, and more.
+        <br />
+        <br />
+        2. <b>Instagram:</b> Owned by Facebook, Instagram is known for its visual appeal. It's ideal for businesses with
+        visually appealing products or services. Advertising options include photo ads, video ads, and Instagram
+        Shopping. <br />
+        <br />
+        3.<b> Twitter:</b> Twitter is a platform for real-time updates and trends. It's effective for timely promotions
+        and news updates. Advertising options include promoted tweets and trends.
+
+
+        <br /><br />
+        4.<b> LinkedIn:</b> LinkedIn is the go-to platform for B2B advertising. It's perfect for reaching a professional
+        audience. Advertising options include sponsored content, sponsored InMail, and display ads.
+
+        <br><br>
+
+        5.<b> TikTok:</b> TikTok is popular among younger audiences and is great for short-form video content.
+        Advertising options include in-feed ads, branded challenges, and more.
+
+
+      </p>
+
+      <h2
+        class="mb-6 block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+        Creating a Social Media Advertising Strategy
+      </h2>
+      <p class="mb-10 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+
+        To unlock the potential of social media advertising, you need a well-thought-out strategy. Here's a step-by-step
+        guide:
+
+        <br />
+        <br />
+
+        1. <b>Define Your Goals:</b> Start by identifying your advertising objectives. Are you looking to increase brand
+        awareness, drive website traffic, or generate leads? Your goals will shape your strategy.
+        <br><br>
+        2. <b>Know Your Audience:</b> Understand your target audience's demographics, interests, and behaviors. This
+        information will help you create content that resonates with them.
+        <br><br>
+        3. <b>Choose the Right Platforms</b>: Select the social media platforms that align with your target audience and
+        goals. It's better to excel on a few platforms than to spread yourself too thin.
+        <br><br>
+        4. <b>Develop Compelling Content</b>: Create engaging and relevant content that speaks to your audience.
+        Visuals, videos, and well-crafted copy are essential.
+        <br><br>
+        5. <b>Set a Budget</b>: Allocate a budget for your social media advertising campaigns. Platforms offer various
+        pricing models, such as cost-per-click (CPC) and cost-per-thousand-impressions (CPM).
+        <br><br>
+        6. <b>Monitor and Optimize</b>: Track the performance of your ads and adjust your strategy accordingly. A/B
+        testing can help identify what works best.
+
+      </p>
+
+      <h2
+        class="mb-6 block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+        Advanced Strategies for Success
+      </h2>
+      <p class="mb-10 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+
+
+
+        Now that you have a basic understanding of social media advertising, let's delve into some advanced strategies
+        to unlock its full potential:
+        <br><br>
+        1.<b> Retargeting:</b> Implement retargeting campaigns to reach users who have already interacted with your
+        brand. This can lead to higher conversion rates.
+        <br><br>
+        2. <b>Custom Audiences:</b> Use data from your existing customer base to create custom audiences. These highly
+        targeted groups are more likely to convert.
+        <br><br>
+        3.<b> Influencer Marketing:</b> Collaborate with influencers to reach their dedicated followers and leverage
+        their authenticity.
+        <br><br>
+        4. <b>Lookalike Audiences:</b> Many platforms offer the option to create lookalike audiences based on your
+        existing customers. This helps you expand your reach to similar users.
+        <br><br>
+        5. <b>Ad Scheduling:</b> Optimize the timing of your ads to reach your audience when they are most active. Use
+        insights and data to make informed decisions.
+        <br><br>
+        6. <b>Ad Creative Testing:</b> Experiment with different ad formats, visuals, and copy to discover what
+        resonates most with your audience.
+
+
+
+
+
+      <h2
+        class="mb-6 block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+        Conclusion
+      </h2>
+      <p class="mb-10 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+
+        Social media advertising is a dynamic and powerful tool that can propel your business to new heights. By
+        understanding the landscape, developing a solid strategy, and implementing advanced techniques, you can unlock
+        its full potential. Remember that social media advertising is not a one-size-fits-all approach; it requires
+        continuous learning and adaptation to stay ahead in the digital marketing game. So, invest your time and
+        resources wisely, and watch your business thrive in the world of social media.
+
+
+      </p>
+
+
+
+
+
+
+      </p>
+
+
+
+      <!-- resource articles -->
+      <div class="bg-white py-4 sm:py-10">
+        <div class="">
+          <div class="mx-auto  sm:text-center  xl:lg:text-left">
+            <h1
+              class=" mt-10 block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+              Other Blogs
+            </h1>
+          </div>
+          <div
+            class="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+
+
+
+
+
+            <!-- More posts... -->
+
+            <article
+              class="relative isolate flex flex-col justify-center h-[400px] overflow-hidden rounded-2xl bg-gray-900 px-8">
+              <img src="assets/images/blog/Influencer Marketing.jpg" alt="The Power of Influencer Marketing in 2023"
+                class="absolute inset-0 -z-10  aspect-[16/9] ">
+              <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+              <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+              <div
+                class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6  mt-40 pt-10 text-gray-300">
+                <time datetime="2022-12-15" class="mr-8">Dec 15, 2022</time>
+
+              </div>
+              <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                <a href="blog1.html">
+                  <span class="absolute inset-0"></span>
+                  The Power of Influencer Marketing in 2023
+                </a>
+              </h3>
+            </article>
+
+            <article
+              class="relative isolate flex flex-col justify-center h-[400px] overflow-hidden rounded-2xl bg-gray-900 px-8">
+              <img src="assets/images/blog/revolutionizing Customer Service.jpg" alt="blog image"
+                class="absolute inset-0 -z-10  aspect-[16/9]">
+              <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+              <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+              <div
+                class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6  mt-40 pt-10 text-gray-300">
+                <time datetime="2023-04-17" class="mr-8">Apr 17, 2023</time>
+
+              </div>
+              <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                <a href="blog3.html">
+                  <span class="absolute inset-0"></span>
+                  AI-Driven Chatbots: Revolutionizing Customer Service
+                </a>
+              </h3>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="contact">
+
+
+    <div class="max-w-2xl mt-10 mx-auto text-white py-10">
+      <div class="text-center ">
+        <div class="flex justify-center">
+          <img src="assets/images/TriADS-main-logos/TriADS Logo.png" class="w-30 h-12 mx-auto" alt="TriADS Logo">
+        </div>
+
+      </div>
+      <div class="mt-10 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400 justify-center">
+        <div class="flex  justify-center items-center mx-auto  sm:gap-2">
+          <a href="index.html" class="px-2 text-black xl:lg:text-lg sm:text-sm  font-semibold ">WHO ARE WE?</a>
+          <a href="index.html" class="px-2  text-black xl:lg:text-lg sm:text-sm  font-semibold ">SERVICES</a>
+          <a href="index.html" class="px-2  text-black xl:lg:text-lg sm:text-sm   font-semibold ">CONTACT US</a>
+        </div>
+
+      </div>
+
+
+
+      <div class="flex justify-center items-center mx-auto gap-1 mt-3 ">
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <a
+            href="https://www.facebook.com/trigeminal.ai.official"
+            class=" inline-block text-white p-1 text-xs font-medium uppercase leading-normal rounded-full bg-black">
+            <span class="sr-only">Facebook</span>
+            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a></a>
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <!-- insta -->
+          <a href="https://www.instagram.com/trigeminal_ai/"
+            class=" inline-block p-1 rounded-full text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style="background-color: black">
+            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </a>
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <!-- linkedin -->
+
+          <a href="https://www.linkedin.com/company/trigeminal/"
+            class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style="background-color: black">
+            <svg class="h-5 w-5" fill="currentColor" data-icon="linkedin-in" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+              class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x">
+              <path fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+              </path>
+            </svg>
+          </a>
+        </a>
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <a href="https://wa.me/918310217802"
+            target="_blank"
+            class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style="background-color: black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" class="bi bi-whatsapp"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+          </a>
+        </a>
+
+
+      </div>
+
+
+
+
+
+    </div>
+    </div>
+  </footer>
+
+
+  <script>
+
+    function Menu(e) {
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+
+    }
+
+    // Function to toggle the menu
+    function toggleMenu() {
+      const menu = document.querySelector('ul');
+      const menuButton = document.querySelector('ion-icon[name="menu"]');
+      if (menuButton.name === 'menu') {
+        menuButton.name = "close";
+        menu.classList.add('top-[80px]');
+        menu.classList.add('opacity-100');
+      } else {
+        menuButton.name = "menu";
+        menu.classList.remove('top-[80px]');
+        menu.classList.remove('opacity-100');
+      }
+    }
+
+    // Add a click event listener to the document
+    document.addEventListener('click', (event) => {
+      const menu = document.querySelector('ul');
+      const menuButton = document.querySelector('ion-icon[name="menu"]');
+      const menuToggleButton = document.querySelector('ion-icon[name="menu"]');
+
+      // Check if the click occurred outside of the menu and menu toggle button
+      if (!menu.contains(event.target) && !menuToggleButton.contains(event.target)) {
+        // Close the menu
+        menuButton.name = "menu";
+        menu.classList.remove('top-[80px]');
+        menu.classList.remove('opacity-100');
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriADS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/TriADS-MAIN-logos/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- setting meta view point  -->
+  <!-- Open Graph meta tags -->
+  
+  <meta property="og:title" content="TriADS">
+  <meta property="og:description" content="Creative advertising solutions, Trusted creative partner, Team with a variety of skills">
+  <meta property="og:image" content="assets/images/TriADS-MAIN-logos/TriADS Logo.png">
+  
+  <!-- replacement of url needed here --> 
+  <meta property="og:url" content="https://www.trigeminal-ai.com/triads/">
+  <!-- robot meta tags (index and non-follow )-->
+  <meta name="robots" content="index, nofollow">
+  <meta name="keywords"
+  content="A dedicated group of exceptionally talented experts who are deeply committed to crafting influential marketing initiatives.">
+  <link rel="shortcut icon" href="assets/images/TriADS-MAIN-logos/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/TriADS-MAIN-logos/TriADS Logo.png" sizes="144x144" />
+  <style>
+    /* Apply Tailwind CSS classes */
+    .image-container {
+      transition: transform 2.3s ease;
+      /* Add smooth transition effect */
+    }
+
+    .image-container:hover .image {
+      transform: scale(1.2);
+      /* Increase the size by 10% on hover */
+    }
+  </style>
+
+  <style>
+    /* moving logo */
+    @keyframes carouselAnim {
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(calc(-100% + (6 * 300px)));
+      }
+    }
+
+    .carousel-focus:hover {
+      transition: all 0.5s;
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+  </style>
+
+  <style>
+    /* moving logo */
+    @keyframes carouselAnimSecond {
+      from {
+        transform: translate(calc(-100% + (6 * 300px)));
+      }
+
+      to {
+        transform: translate(0, 0);
+      }
+    }
+
+
+
+    .carousel-focus:hover {
+      transition: all 0.5s;
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+  </style>
+
+  <style>
+    @media (max-width: 1281px) {
+
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        padding: 0;
+
+
+
+      }
+      .text-process-lg {
+        display: block;
+      }
+
+       .text-process-sm {
+        display: none;
+      }
+
+     
+      .testimonials {
+        text-align: left;
+      }
+     
+      .show-on-small-screen {
+        display: none;
+        padding: 20px;
+      }
+
+
+      .hide-on-small-screen {
+        display: block;
+      }
+
+
+    }
+  </style>
+  <style>
+    @media screen and (max-height:790px) {
+
+
+      .text-process-sm {
+        display: block;
+      }
+
+    }
+
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 480px) {
+      #message {
+        height: 4em;
+      }
+
+
+      .img-container {
+        visibility: hidden;
+      }
+
+      .form-container {
+        padding-left: 30px;
+        padding-bottom: 0px;
+        justify-content: center;
+        width: 300px;
+      }
+
+
+      .show-on-small-screen {
+        display: block;
+        padding: 20px;
+      }
+
+
+      .hide-on-small-screen {
+        display: none;
+      }
+
+      .text-process-lg {
+        display: none;
+      }
+
+
+
+      .text-process-sm {
+        display: block;
+      }
+
+
+
+      .logo-img {
+        display: none;
+      }
+
+      .testimonials {
+        text-align: center;
+        font-size: smaller;
+      }
+
+      .hidden-sm {
+        display: none;
+      }
+
+      .excellent-lg {
+        display: none;
+      }
+
+      .typing {
+
+        text-align: center;
+        margin-top: -10px;
+      }
+
+      .type-contact {
+        margin-top: 5px;
+      }
+
+
+
+
+    }
+
+    /* Media Query for low resolution  Tablets, Ipads ,landscape mode of mobile screen */
+    @media (min-width: 481px) and (max-width: 767px) {
+      #message {
+        height: 4em;
+      }
+
+
+      .img-container {
+        visibility: hidden;
+      }
+
+      .form-container {
+        width: 50%;
+        /* Adjust the width as needed */
+        justify-content: center;
+      }
+
+      .show-on-small-screen {
+        display: block;
+        padding: 20px;
+      }
+
+
+      .hide-on-small-screen {
+        display: none;
+      }
+
+      .text-process-lg {
+        display: none;
+      }
+
+
+      .text-process-sm {
+        display: block;
+      }
+
+      .logo-img {
+        display: none;
+      }
+
+      .testimonials {
+        text-align: center;
+        font-size: smaller;
+      }
+
+      .hidden-sm {
+        display: none;
+      }
+
+      .excellent-lg {
+        display: none;
+      }
+
+      .custom-pb-10 {
+        padding-bottom: 1.25rem;
+        /* You can adjust the value as needed */
+      }
+
+
+      .typing {
+        text-align: center;
+
+      }
+
+      .type-contact {
+        margin-top: 40px;
+      }
+
+
+
+
+
+    }
+
+
+
+    /* Media Query for Tablets Ipads portrait mode */
+    @media (min-width: 768px) and (max-width: 1024px)  {
+
+      .hide-on-small-screen {
+        display: none;
+      }
+
+      .show-on-small-screen {
+        display: block;
+        padding: 20px;
+      }
+
+      .text-process-lg {
+        display: none;
+      }
+
+      .text-process-sm {
+        display: block;
+      }
+
+      .Based-sm-hidden {
+        display: none;
+
+      }
+
+      .excellent-lg {
+        display: none;
+
+      }
+
+      .testimonials {
+        text-align: left;
+        font-size: smaller;
+      }
+
+      .logo-img {
+        display: none;
+      }
+
+      .typing {
+
+        text-align: center;
+      }
+
+
+
+
+    }
+
+
+    /* Media Query for Laptops and Desktops */
+    @media (min-width: 1025px) and (max-width: 1280px) and (orientation:landscape) {
+      .Based-sm-hidden {
+        display: none;
+
+      }
+
+      .excellent-sm {
+        display: none;
+
+      }
+
+      .text-process-lg {
+        display: block;
+      }
+
+      .text-process-sm {
+        display: none;
+      }
+
+       .hide-on-small-screen {
+        display: none;
+      }
+
+      .show-on-small-screen {
+        display: block;
+        padding: 20px;
+      }
+
+
+
+    }
+
+    /* Media Query for Large screens */
+    @media (min-width: 1281px) {
+
+
+      .Based-sm-hidden {
+        display: none;
+
+      }
+
+      .excellent-sm {
+        display: none;
+
+      }
+
+      .text-process-sm {
+        display: none;
+      }
+
+      .show-on-small-screen {
+        display: none;
+      }
+
+
+      .hide-on-small-screen {
+        display: block;
+      }
+
+    }
+  </style>
+
+
+</head>
+
+<body class="overflow-x-hidden">
+  <div class="w-full fixed z-50 bg-gray-100 top-0 -mt-1">
+    <nav
+      class="p-4 items-center justify-between mx-auto max-w-[75rem] bg-gray-100 lg:flex lg:items-center lg:justify-between">
+      <div class="flex justify-between items-center">
+        <a class="flex-none text-xl font-semibold xl:lg:px-5" href="#">
+          <img src="assets/images/TriADS-MAIN-logos/TriADS Logo.png" class="w-29 h-14" alt="TriADS Logo">
+        </a>
+        <span class="text-3xl cursor-pointer lg:hidden mx-2 block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        class="lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute bg-gray-100 w-full left-0 lg:w-auto lg:py-0 py-0 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 lg:my-0">
+          <a href="#whoweare" class="text-lg text-gray-900 font-semibold hover:text-[#0055ba] duration-500">WHO WE
+            ARE?</a>
+        </li>
+        <li class="mx-4 my-6 lg:my-0">
+          <a href="#service" class="text-lg text-gray-900 font-semibold hover:text-[#0055ba] duration-500">OUR
+            SERVICES</a>
+        </li>
+        <li class="mx-4 my-6 lg:my-0">
+          <a href="#contact" class="text-lg text-gray-900 font-semibold hover:text-[#0055ba] duration-500">CONTACT
+            US</a>
+        </li>
+        <li>
+          <a class="md:p-1 py-2 block hover:text-purple-400" href="#">
+            <div class="h-[65px] border-l-4 border-gray-400 hidden md:hidden lg:block sm:block"></div>
+          </a>
+        </li>
+
+        <div class=" flex  px-5 space-x-2 pb-10 lg:pb-0 items-center ">
+          <li class="">
+            <a class=" block  text-purple-500" href="#"> <a href="https://www.facebook.com/trigeminal.ai.official"
+                class=" inline-block text-white p-1 text-xs font-medium  uppercase leading-normal rounded-full bg-black">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a></a>
+          </li>
+
+          <li>
+            <a class=" block " href="#"> <!-- insta -->
+              <a href="https://www.instagram.com/trigeminal_ai/"
+                class=" inline-block p-1 rounded-full text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a></a>
+          </li>
+
+
+          <li>
+            <a class=" block " href="#"> <!-- linkedin -->
+
+              <a href="https://www.linkedin.com/company/trigeminal/"
+                class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg class="h-5 w-5" fill="currentColor" data-icon="linkedin-in" role="img"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                  class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x">
+                  <path fill="currentColor"
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                  </path>
+                </svg>
+              </a>
+            </a>
+          </li>
+
+
+          <li>
+            <a class=" block" href="#"> <a href="https://wa.me/918310217802" target="_blank"
+                class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                style="background-color: black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" class="bi bi-whatsapp"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg>
+              </a>
+            </a>
+          </li>
+        </div>
+
+
+      </ul>
+    </nav>
+  </div>
+
+
+  <section class="relative bg-[#4784c5] bg-cover bg-center ">
+
+    <section class="relative mx-auto max-w-[70rem]   xl:lg:px-0 py-32  lg:flex  lg:h-screen lg:items-center ">
+      <div class="flex flex-col w-full xl:flex-row lg:flex-row md:flex-col  sm:flex-col lg:mt-20">
+        <div class="typing   w-full max-w-5xl text-2xl lg:text-5xl  xl:mb-0 md:mb-5 text-white xl:w-7/12">
+          <p class="lg:text-5xl md:text-2xl text-2xl leading-loose  sm:mt-0  lg:text-left font-bold text-white">
+            Looking for
+          </p>
+
+
+
+          <span id="typed-output"
+            class="lg:text-5xl  md:text-2xl text-2xl lg:leading-loose sm:leading-loose  font-bold  lg:mt-10 md:mt-10 sm:mt-2 text-white text-left"></span>
+
+          <h2 class="lg:text-4xl md:text-2xl text-lg  lg:text-left leading-loose sm:leading-loose text-white ">
+            Talk to our experts!
+          </h2>
+        </div>
+
+        <div class="type-contact mx-auto  max-w-md xl:px-5 xl:lg:md:w-[400px] w-[270px]  text-sm ">
+          <div class="bg-white rounded-2xl shadow-2xl p-7 ">
+            <h3 class="typing  mb-2 text-[#004AAD] mt-2 text-left font-bold  xl:lg:text-3xl  sm:mb-6 text-xl">
+              Get a Free Quote!
+
+            </h3>
+            <form id="contact-form" class="font-normal xl:lg:space-y-6">
+              <div class="flex items-center border py-1 px-3 rounded-xl text-sm mb-4 sm:mt-1 xl:lg:mt-5">
+                <input class=" outline-none border-none p-0.5" type="text" name="Name" id="from_name"
+                  placeholder="Name*" />
+              </div>
+
+              <div class="flex items-center border py-1 px-3 text-sm rounded-xl mb-4 ">
+                <input class=" outline-none border-none p-0.5" type="text" name="EmailId" id="email_id"
+                  placeholder="Email*" />
+              </div>
+
+              <div class="flex items-center border py-1 px-3 text-sm rounded-xl mb-4">
+                <input class="outline-none border-none p-0.5" type="text" name="phone_number" id="phone_number"
+                  placeholder="Phone Number*" />
+              </div>
+
+              <div class="flex items-center border py-1 px-3 text-sm rounded-xl mb-4">
+                <input class="outline-none border-none p-0.5" type="text" name="Subject" id="subject"
+                  placeholder="Subject*" />
+              </div>
+
+              <div class="py-0">
+                <textarea class="w-full flex items-center border py-1 px-3 text-sm rounded-xl resize  p-0.5"
+                  name="Message" id="message" cols="50" placeholder="Tell us a bit about your requirement!"
+                  rows="4"></textarea>
+              </div>
+
+              <button type="submit"
+                class="submit-btn px-14 flex justify-center items-center bg-black mt-4 py-2 rounded-lg text-white font-semibold mb-2 mx-auto">
+                Submit
+              </button>
+
+
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <img
+        class="img-container absolute w-1/3  bottom-0 lg:block sm:hidden -translate-y-1 -translate-x-48 right-1/2 opacity-60"
+        src="https://trigeminal.blr1.cdn.digitaloceanspaces.com/www/triads/TriADS-CDN/hero-section/Lady%20pointing.png "
+        alt="Lady pointing image">
+    </section>
+  </section>
+
+
+
+
+  <!-- who we are -->
+  <div id="whoweare"></div>
+
+  <!-- who we are section -->
+  <div class="mt-10 bg-white px-6 py-14 sm:py-15 lg:px-0">
+    <h1 class="mt-5 sm:mt-10 lg:text-5xl font-bold text-gray-900 text-4xl text-center">
+      Who are we?
+    </h1>
+    <div class="max-w-full leading-loose flex justify-center items-center">
+      <span class="lg:text-3xl text-xl mt-10 max-w-5xl font-normal  text-[#0055ba] text-center">
+        A dedicated group of exceptionally talented experts who are deeply
+        committed to crafting influential marketing initiatives. Our agency
+        embraces a comprehensive perspective when it comes to advertising. Our
+        designers, copywriters, and digital marketers work together
+        seamlessly, guaranteeing the consistent delivery of your message
+        across every platform.
+      </span>
+    </div>
+
+
+    <div id="service"></div>
+  </div>
+
+
+
+  <!-- our services -->
+
+  <div class="bg-white   px-6 py-5 sm:py-15 lg:px-0">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
+      <h1 class="mt-5 sm:mt-10 lg:text-5xl font-bold text-gray-900 text-4xl text-center">
+        Our Services
+      </h1>
+      <div
+        class="mx-auto  mt-20 cursor-pointer grid max-w-lg grid-cols-2 sm:grid-cols-2 md:grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl  sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <!-- Repeat this structure for each image -->
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+              src="assets/images/Individual Logos/2D Animation.png" alt="2D Animation icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">2D Animation</p>
+
+          </div>
+        </div>
+        <!-- Repeat for other images -->
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+              src="assets/images/Individual Logos/AD Campaign.png" alt="AD Campaign icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2  text-xl">AD Campaign</p>
+
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+              src="assets/images/Individual Logos/AD Films.png" alt="AD Films icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2  text-xl">AD Films</p>
+
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 max-h-14 w-full object-contain lg:col-span-1"
+              src="assets/images/Individual Logos/Brand Communication Strategy.png"
+              alt="Brand Communication Strategy icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 t text-xl">Branding & Communication</p>
+
+          </div>
+        </div>
+        <!-- <div>
+          <img class="col-span-2 max-h-12 w-full mt-5 object-contain lg:col-span-1"
+            src="assets/images/Individual Logos/Brand Communication Strategy.png" alt="SavvyCal" width="158" height="48">
+          <p class="text-center leading-normal mt-2 text-xl">Brand Communication Strategy</p>
+
+        </div> -->
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Branding.png" alt="Branding icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Branding</p>
+
+          </div>
+
+        </div>
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain lg:col-span-1"
+              src="assets/images/Individual Logos/Corporate Presentation.png" alt="Corporate Presentation icon"
+              width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Corporate Presentation</p>
+
+          </div>
+        </div>
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Digital Creatives.png" alt="Digital Creatives logo" width="158"
+              height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Digital Creatives</p>
+
+          </div>
+        </div>
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/GIF Animations.png" alt="GIF Animations icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">GIF Animations</p>
+
+          </div>
+        </div>
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Graphic Design.png" alt="Graphic Design icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Graphic Design</p>
+
+          </div>
+        </div>
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Logo Design.png" alt="Logo Design icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Logo Design</p>
+
+          </div>
+        </div>
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Marketing Collaterals.png" alt="Marketing Collaterals icon"
+              width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Marketing Collaterals</p>
+
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Newspaper Advertisements.png" alt="Newspaper Advertisements icon"
+              width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Newspaper Advertisements</p>
+
+          </div>
+        </div>
+        <div class="image-container">
+
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Outdoor Creatives.png" alt="Outdoor Creatives icon" width="158"
+              height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Outdoor Creatives</p>
+
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Packaging.png" alt="Packaging icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Packaging</p>
+
+          </div>
+        </div>
+
+
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Radio Scripts.png" alt="Radio Scripts icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Radio Scripts</p>
+
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Social Media Content.png" alt="Social Media Content icon" width="158"
+              height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Social Media Content</p>
+
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/UI UX Design.png" alt="UI UX Design icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">UI UX Design</p>
+
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Video Production.png" alt="Video Production icon" width="158"
+              height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Video Production</p>
+
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Website Design.png" alt="Website Design icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Website Design</p>
+
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="image">
+            <img class="col-span-2 col-start-2 max-h-14 w-full object-contain  lg:col-span-1"
+              src="assets/images/Individual Logos/Web Apps.png" alt="Web Apps icon" width="158" height="48">
+            <p class="text-center leading-normal mt-2 text-xl">Web Apps</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- The process section -->
+  <div class="mt-10 bg-white py-10 sm:py-16 lg:px-0 text-white">
+    <div class="bg-gradient-to-r from-[#006dff] to-[#000192] py-16">
+      <div class="container lg:mx-auto sm:mx-0 text-center text-process-lg">
+        <p class="lg:text-5xl  font-bold text-white">
+          THE PROCESS <span class="lg:mx-10 text-2xl   font-normal  text-white">“Redefining
+            your
+            Business
+            Digital Opportunities”</span>
+        </p>
+      </div>
+      <div  class="w-full lg:mx-auto  sm:mx-0 text-center justify-center text-process-sm">
+        <p class="text-3xl  font-bold text-white">
+          THE PROCESS
+        </p>
+        <span class="lg:mx-10 text-2xl   font-normal  text-white">“Redefining
+          your
+          Business
+          Digital Opportunities”</span>
+      </div>
+    </div>
+
+
+    <video autoplay muted loop playsinline
+      src="https://trigeminal.blr1.cdn.digitaloceanspaces.com/www/triads/TriADS-CDN/video/TriADS%20Logo.mp4"
+      type="video/mp4" class="w-full object-cover object-right md:object-center"></video>
+  </div>
+
+
+  <!-- why choose us? -->
+  <div class="flex items-center justify-center">
+    <img
+      src="https://trigeminal.blr1.cdn.digitaloceanspaces.com/www/triads/TriADS-CDN/TriADS-why-choose-us/TriADS%20Webpage%20Why%20choose%20us.png"
+      alt="why choose us image for large screen" class="hide-on-small-screen">
+    <img
+      src="https://trigeminal.blr1.cdn.digitaloceanspaces.com/www/triads/TriADS-CDN/TriADS-why-choose-us/TriADS%20Webpage%20Why%20choose%20us%20mobile.png"
+      alt="why choose us image for small screen" class="show-on-small-screen">
+  </div>
+
+
+
+
+
+  <!-- logo moving section -->
+  <!-- logo moving section -->
+  <div class="mt-8  px-0 py-8 sm:py-10 lg:px-0">
+
+
+    <!-- logo -->
+    <section class=" overflow-x-hidden z-[0]  bg-gray-100">
+      <div class="mx-auto w-full overflow-hidden relative">
+        <div class="carousel-items  flex items-center justify-center" style="
+                width: fit-content;
+                animation: carouselAnim 20s infinite alternate linear;
+              ">
+          <div class="carousel-focus   flex items-center flex-col relative bg-gray-100  mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/DigiDxDoc.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4"
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Dine-O-Code.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Dr Doggo.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Dr Zoo.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus  flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/iVET GeneX.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Hoof Boss.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Ignite - Thrissur.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus  flex items-center flex-col relative bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/iVET Aqua.png" alt="Clients logo" />
+          </div>
+
+
+
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Jeevamrutham Inclusions.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/iVET.png" alt="Clients logo" />
+          </div>
+
+
+        </div>
+
+        <div class="carousel-itemsSecond flex items-center justify-center" style="
+                width: fit-content;
+                animation: carouselAnimSecond 20s infinite alternate linear;
+              ">
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4"
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Jeevamrutham Lifestyle Spa.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Kingini Orchids.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Medhelix.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Pearle's Diagnostics.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Petrado.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/SayGen Genetics.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4"
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Ubio.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Vetragen Healthcare.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Von Aanja Pet Relocation.png" alt="Clients logo" />
+          </div>
+
+          <div class="carousel-focus flex items-center flex-col relative  bg-gray-100 mx-10  xl:lg:my-10 px-4 "
+            style="width: 370px">
+            <img class="h-50 w-70" src="assets/images/Triads Logo/Zootopia.vet.png" alt="Clients logo" />
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+  </div>
+
+
+
+  <!-- testimonials -->
+  <div class="px-6 py-7 xl:lg:py-0 sm:py-5 lg:px-0 sm:justify-center">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 mx-auto max-w-7xl">
+
+      <div class="align-left leading-tight text-center">
+        <h1 class=" font-semibold text-gray-900 text-xl sm:text-center">Testimonials</h1>
+
+        <img class="mx-auto block w-32 h-22 mt-5" src="assets/images/Triads Logo/google.png" alt="Clients logo" />
+        <div class="mb-6  flex justify-center items-center ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+        </div>
+
+
+
+        <div class="flex justify-center items-center">
+          <div class="max-w-[300px] lg:text-left text-center">
+            <h1 class="text-xl font-sans font-semibold -mt-4 excellent-lg">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excellent</h1>
+            <h1 class="text-xl font-sans font-semibold text-center excellent-sm">
+              <p>Excellent
+            </h1>
+
+            <h1 class="text-lg hidden-sm">
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Based on <b>35 reviews</b></p>
+            </h1>
+            <h1 class="text-xs font-sans antialiased Based-sm-hidden text-center">
+              <p>Based on <b>35 reviews</b>
+            </h1>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+      <div>
+        <p class="testimonials font-medium italic sm:text-center xl:lg:text-left p-5">
+          "Choosing TriADS as our marketing partner has been one of the best decisions we've made this year. Their
+          team's
+          innovative strategies and relentless pursuit of excellence have not only boosted our online presence but also
+          led to a
+          significant increase in our lead generation. Their expertise in SEO, content creation, and social media
+          marketing has
+          given our brand a competitive edge in the market. What sets them apart is their commitment to understanding
+          our
+          business, our audience, and our goals. We highly recommend TriADS to any business looking to
+          elevate their digital marketing game."
+
+
+
+        </p>
+
+        <p class="testimonials px-5 mt-2 font-semibold">
+          Dr. Bishor V I
+        </p>
+        <p class="testimonials px-5 italic">
+          CEO, SayGen Genetics
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- resource articles -->
+  <div class="bg-white py-10 sm:py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto  sm:text-center  xl:lg:text-left">
+        <h1 class="mt-5 sm:mt-10 lg:text-5xl font-bold text-gray-900 text-4xl xl:lg:text-left text-center">
+          Resource Articles
+        </h1>
+      </div>
+      <div
+        class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+
+
+
+        <article
+          class="relative isolate flex flex-col justify-center h-[400px] overflow-hidden rounded-2xl bg-gray-900 px-8">
+          <img src="assets/images/blog/Influencer Marketing.jpg" alt="The Power of Influencer Marketing in 2023"
+            class="absolute inset-0 -z-10  aspect-[16/9] ">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+          <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+          <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6  mt-40 pt-10 text-gray-300">
+            <time datetime="2022-12-15" class="mr-8">Dec 15, 2022</time>
+
+          </div>
+          <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+            <a href="blog1.html">
+              <span class="absolute inset-0"></span>
+              The Power of Influencer Marketing in 2023
+            </a>
+          </h3>
+        </article>
+
+        <!-- More posts... -->
+        <article
+          class="relative isolate flex flex-col justify-center h-[400px] overflow-hidden rounded-2xl bg-gray-900 px-8">
+          <img src="assets/images/blog/social Media Advertising.jpg"
+            alt="Unlocking the Potential of Social Media Advertising" class="absolute inset-0 -z-10  aspect-[16/9] ">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+          <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+          <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6  mt-40 pt-10 text-gray-300">
+            <time datetime="2023-02-22" class="mr-8">Feb 22, 2023</time>
+
+          </div>
+          <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+            <a href="blog2.html">
+              <span class="absolute inset-0"></span>
+              Unlocking the Potential of Social Media Advertising
+            </a>
+          </h3>
+        </article>
+
+        <article
+          class="relative isolate flex flex-col justify-center h-[400px] overflow-hidden rounded-2xl bg-gray-900 px-8">
+          <img src="assets/images/blog/revolutionizing Customer Service.jpg" alt="blog image"
+            class="absolute inset-0 -z-10  aspect-[16/9]">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+          <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+          <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6  mt-40 pt-10 text-gray-300">
+            <time datetime="2023-04-17" class="mr-8">Apr 17, 2023</time>
+
+          </div>
+          <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+            <a href="blog3.html">
+              <span class="absolute inset-0"></span>
+              AI-Driven Chatbots: Revolutionizing Customer Service
+            </a>
+          </h3>
+        </article>
+
+      </div>
+    </div>
+
+    <div id="contact"></div>
+  </div>
+
+
+
+
+  <!-- 3d img -->
+  <div class="max-w-full bg-gray-100  px-6  lg:px-0">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mx-auto max-w-8xl">
+      <!-- First Column -->
+      <div class="bg-gray-100 w-full flex justify-end items-end ">
+        <!-- Content for the first column -->
+
+        <model-viewer
+          src="https://trigeminal.blr1.cdn.digitaloceanspaces.com/www/triads/TriADS-CDN/contact-section/Macaw.glb"
+          alt="A 3D model of a Macaw" auto-rotate camera-controls style="width: 100%; height: 600px;">
+
+
+          <div id="fullscreenControls" class="absolute right-0 top-0 text-gray-400">
+            <button id="fullscreenButton" onclick="enterFullscreen()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor"
+                class="bi bi-arrows-fullscreen " viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+              </svg>
+            </button>
+            <button id="closeButton" onclick="closeFullscreen()" style="display: none;"><i
+                class="fa-solid fa-xmark fa-2xl px-5 py-10"></i></button>
+          </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="bg-gray-100">
+        <div class="xl:lg:p-10 sm:p-0 md:p-5">
+          <img src="assets/images/TriADS-MAIN-logos/TriADS Logo.png" class="w-[450px] h-[125px] logo-img"
+            alt="TriADS Logo">
+
+        </div>
+
+        <div class="xl:lg:px-10 sm:px-0 text-lg  leading-8 font-normal  max-w-full ">
+          <p class="max-w-2xl pr-4">
+            We assist in envisioning your brand's digital presence and devising strategies to provide optimal solutions
+            for facilitating your brand's growth. We ensure a comprehensive understanding of your brand's essence,
+            aligning goals in harmony with your core values and principles.
+          </p>
+        </div>
+          <div class=" xl:lg:flex block grid-cols-4 md:grid-cols-2 lg:grid-cols-2 lg:flex  mx-auto max-w-full mb-5 mt-8 lg:px-9 md:px-4 ">
+          
+              <div class=" py-4 sm:pl-0 px-2">
+                <i class="fa-solid fa-phone text-white bg-black rounded-full p-2"></i>
+              </div>
+    
+              <div class="text-xl">
+                <span class="flex gap-x-2 px-2">
+                  Call Us
+                </span>
+                <p class="text-xl font-bold">&nbsp;+91 8921 541 862</p>
+              </div>
+    
+            
+          
+  
+              <div class="lg:pl-10  py-4 sm:pl-0 px-2">
+                <i class="fa-solid fa-envelope text-white bg-black rounded-full p-2"></i>
+              </div>
+    
+              <div class="text-xl">
+                <span class="flex gap-x-2 px-2">
+                  Email Us
+                </span>
+                <p class="text-xl font-bold">&nbsp;triads@trigeminal-ai.com</p>
+              </div>
+        
+          </div>
+        
+
+     
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- footer -->
+  <footer>
+
+
+    <div class="max-w-2xl mt-10 mx-auto text-white py-10">
+      <div class="text-center ">
+        <div class="flex justify-center">
+          <img src="assets/images/TriADS-MAIN-logos/TriADS Logo.png" class="w-30 h-12 mx-auto" alt="TriADS Logo">
+        </div>
+
+      </div>
+      <div class="mt-10 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400 justify-center">
+        <div class="flex  justify-center items-center mx-auto  sm:gap-2">
+          <a href="#whoweare" class="px-2 text-black xl:lg:text-lg sm:text-sm  font-semibold ">WHO ARE WE?</a>
+          <a href="#service" class="px-2  text-black xl:lg:text-lg sm:text-sm  font-semibold ">SERVICES</a>
+          <a href="#contact" class="px-2  text-black xl:lg:text-lg sm:text-sm   font-semibold ">CONTACT US</a>
+        </div>
+
+      </div>
+
+
+
+      <div class="flex justify-center items-center mx-auto gap-1 mt-3 ">
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <a
+            href="https://www.facebook.com/trigeminal.ai.official"
+            class=" inline-block text-white p-1 text-xs font-medium uppercase leading-normal rounded-full bg-black">
+            <span class="sr-only">Facebook</span>
+            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a></a>
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <!-- insta -->
+          <a href="https://www.instagram.com/trigeminal_ai/"
+            class=" inline-block p-1 rounded-full text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style="background-color: black">
+            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </a>
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <!-- linkedin -->
+
+          <a href="https://www.linkedin.com/company/trigeminal/"
+            class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style="background-color: black">
+            <svg class="h-5 w-5" fill="currentColor" data-icon="linkedin-in" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+              class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x">
+              <path fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+              </path>
+            </svg>
+          </a>
+        </a>
+
+        <a class=" block hover:text-purple-400 text-purple-500" href="#"> <a href="https://wa.me/918310217802"
+            target="_blank"
+            class=" inline-block rounded-full p-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style="background-color: black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" class="bi bi-whatsapp"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+          </a>
+        </a>
+
+
+      </div>
+
+
+
+
+
+    </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <script>
+    // typing 
+    var options = {
+      strings: ["Branding?", "Digital Marketing?", "Website?", "Social Media Management?", "WebApp?"],
+      typeSpeed: 70, // typing speed in milliseconds
+      backSpeed: 30, // erasing speed in milliseconds
+      backDelay: 1000, // delay before starting to erase
+      startDelay: 500, // delay before starting to type
+      loop: true, // loop through the strings
+    };
+
+    var typed = new Typed("#typed-output", options);
+
+
+
+    // navabr
+
+
+
+    function Menu(e) {
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+
+    }
+
+    // Function to toggle the menu
+    function toggleMenu() {
+      const menu = document.querySelector('ul');
+      const menuButton = document.querySelector('ion-icon[name="menu"]');
+      if (menuButton.name === 'menu') {
+        menuButton.name = "close";
+        menu.classList.add('top-[80px]');
+        menu.classList.add('opacity-100');
+      } else {
+        menuButton.name = "menu";
+        menu.classList.remove('top-[80px]');
+        menu.classList.remove('opacity-100');
+      }
+    }
+
+    // Add a click event listener to the document
+    document.addEventListener('click', (event) => {
+      const menu = document.querySelector('ul');
+      const menuButton = document.querySelector('ion-icon[name="menu"]');
+      const menuToggleButton = document.querySelector('ion-icon[name="menu"]');
+
+      // Check if the click occurred outside of the menu and menu toggle button
+      if (!menu.contains(event.target) && !menuToggleButton.contains(event.target)) {
+        // Close the menu
+        menuButton.name = "menu";
+        menu.classList.remove('top-[80px]');
+        menu.classList.remove('opacity-100');
+      }
+    });
+
+  </script>
+
+  <script>
+    function enterFullscreen() {
+      const modelViewer = document.querySelector('model-viewer');
+      modelViewer.requestFullscreen();
+    }
+  </script>
+
+  <script>
+    let isFullscreen = false;
+
+    function enterFullscreen() {
+      const fullscreenControls = document.getElementById('fullscreenControls');
+      const fullscreenButton = document.getElementById('fullscreenButton');
+      const closeButton = document.getElementById('closeButton');
+      const modelViewer = document.querySelector('model-viewer');
+
+      if (!isFullscreen) {
+        modelViewer.requestFullscreen();
+        fullscreenButton.style.display = 'none';
+        closeButton.style.display = 'block';
+        isFullscreen = true;
+      }
+    }
+
+    function closeFullscreen() {
+      const fullscreenControls = document.getElementById('fullscreenControls');
+      const fullscreenButton = document.getElementById('fullscreenButton');
+      const closeButton = document.getElementById('closeButton');
+      const modelViewer = document.querySelector('model-viewer');
+
+      if (isFullscreen) {
+        document.exitFullscreen();
+        fullscreenButton.style.display = 'block';
+        closeButton.style.display = 'none';
+        isFullscreen = false;
+      }
+    }
+  </script>
+  <script>
+    contactForm = document.querySelector("#contact-form");
+    submitBtn = document.querySelector(".submit-btn");
+    from_name = document.querySelector("#from_name");
+    email_id = document.querySelector("#email_id");
+    phone_number = document.querySelector("#phone_number");
+    subject = document.querySelector("#subject");
+    message = document.querySelector("#message");
+    errorElement = document.querySelector("#error-message"); // Add this line
+
+    const publickey = "cDWvTTWtM8erWRzNP";
+    const serviceID = "service_1nz1vi3";
+    const templateID = "template_9527ufb";
+
+    emailjs.init(publickey);
+
+    contactForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+
+
+      const inputFields = {
+        from_name: from_name.value,
+        email_id: email_id.value,
+        phone_number: phone_number.value,
+        subject: subject.value,
+        message: message.value
+      };
+
+
+      emailjs.send(serviceID, templateID, inputFields)
+        .then(() => {
+          submitBtn.innerText = "Message sent";
+          submitBtn.style.color = "white";
+          submitBtn.style.backgroundColor = "green";
+
+          // from_name.value = "";
+          // email_id.value = "";
+          // phone_number.value = "";
+          // subject.value = "";
+          // message.value = "";
+          // submitBtn =""
+
+          setTimeout(() => {
+            window.location.reload(); // This will reload the current page
+          }, 3000);
+
+        }, (error) => {
+          console.log(error);
+          submitBtn.innerText = "Error";
+        });
+    });
+  </script>
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- right click comment -->
+  <!-- <script type="text/javascript">
+          document.addEventListener('contextmenu', function(e) {
+              e.preventDefault();
+          });
+  </script> -->
+</body>
+
+</html>
+
+</html>
